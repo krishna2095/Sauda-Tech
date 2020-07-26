@@ -1,0 +1,69 @@
+Hi,
+
+Welcome to Round-2 of the internship process. Please complete the following assignment by 28th July, 4 pm.
+
+Assignment
+1. Create a web API in Flask
+
+Details
+1. Add a /login API
+If you run locally, the web call will be "http://localhost/login". If you run on a server, then the web call will be "http://server_url/login"
+2. Request method/type is POST
+3. 2 inputs
+username and password
+4. Output in JSON format
+{    "status": 200,
+     "msg": "Success",
+}
+
+Use Cases
+When I call the /login API and provide the following input, please provide following output
+
+Case 1
+Input:
+{    "username": "vaibhav",
+     "password": "abcd12"
+}
+Output
+{    "status": 200,
+     "msg": "Success"
+}
+
+Case 2
+Input:
+{    "username": "vaibhav",
+     "password": "abcd"
+}
+Output
+{    "status": 201,
+     "msg": "Failure: password should be of length 6"
+}
+
+Case 3
+Input:
+{    "username": "vaibhav",
+     "password": "abcdef"
+}
+Output
+{    "status": 202,
+     "msg": "Failure: password to have 1 character and 1 number"
+}
+
+Case 4
+Input:
+{    "username": "1234",
+     "password": "abcd12"
+}
+Output
+{    "status": 203,
+     "msg": "Failure: only characters allowed in username"
+}
+
+
+Please provide following by 28th July, 4:00 pm
+1. Code in GitHub repo
+2. Libraries used, if any
+
+
+Best,
+Vaibhav
